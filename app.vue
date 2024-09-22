@@ -1,7 +1,7 @@
 <template>
   <div>
-    <nuxtLayout>
+    <NuxtLayout>
       <NuxtPage />
-    </nuxtLayout>
+    </NuxtLayout>
   </div>
 </template>
