@@ -20,9 +20,6 @@ import 'bootstrap';
         <NuxtLink
           to="/inspiration"
           class="btn btn-success text-light mt-4 custom-btn"
-          data-bs-toggle="tooltip"
-          data-bs-placement="top"
-          title="Click for inspiring garden ideas"
         >
           Get Inspired
         </NuxtLink>
