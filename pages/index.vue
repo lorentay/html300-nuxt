@@ -29,33 +29,7 @@ import 'bootstrap';
 </template>
 
 <script setup>
-import { onMounted, onBeforeUnmount } from "vue";
 
-let tooltipInstances = [];
-
-// initializes tooltips only on the client side
-onMounted(() => {
-  if (process.client) {
-    import("bootstrap/js/dist/tooltip").then(({ default: Tooltip }) => {
-      const tooltipTriggerList = document.querySelectorAll(
-        '[data-bs-toggle="tooltip"]'
-      );
-
-      tooltipTriggerList.forEach((tooltipTriggerEl) => {
-        const tooltipInstance = new Tooltip(tooltipTriggerEl);
-        tooltipInstances.push(tooltipInstance);
-      });
-    });
-  }
-});
-
-// cleanup tooltips on unmount to avoid persistence
-onBeforeUnmount(() => {
-  if (tooltipInstances.length > 0) {
-    tooltipInstances.forEach((instance) => instance.dispose()); // Dispose of all tooltips
-    tooltipInstances = []; // Clear the array after disposing
-  }
-});
 </script>
 
 <style scoped>
