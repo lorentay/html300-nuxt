@@ -1,21 +1,20 @@
 <script setup>
-import {defineProps} from "vue";
-import Card from "@/components/Card.vue";
 
+// Define the props passed from the parent component
 const props = defineProps({
-  name: String,
-  subregion: String,
-  flag: String,
-})
+  cycle: String,
+  watering: String, 
+  sunlight: String,
+  image: String
+});
 </script>
 
 <template>
   <div class="card">
-    <h3>{{ props.name }}</h3>
-    <p>
-      {{ props.subregion }}
-    </p>
-    <img :src="props.flag" alt="Country Flag" />
+    <img :src="image" alt="Plant Image" v-if="image" /> 
+    <h3>Cycle: {{ cycle }}</h3> 
+    <p>Watering: {{ watering }}</p>
+    <p>Sunlight: {{ sunlight }}</p>
   </div>
 </template>
 
