@@ -1,0 +1,21 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    'plugin:vue/vue3-recommended', // For Vue 3 projects
+    'eslint:recommended',
+    'prettier', // Optional, for Prettier integration
+  ],
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  plugins: [
+    'vue', // Enables linting for Vue files
+  ],
+  rules: {
+    // Add custom rules or overrides here if needed
+  },
+};
