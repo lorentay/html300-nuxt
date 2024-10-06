@@ -40,14 +40,15 @@ console.log(images.value);
 // adds metadata for the page
 const head = () => {
   return {
-    title: 'Garden Inspiration - Gardens & Sips',
+    title: "Garden Inspiration - Gardens & Sips",
     meta: [
       {
-        hid: 'description',
-        name: 'description',
-        content: 'Get inspired by beautiful garden settings and ideas to enhance your outdoor space with creative arrangements and lighting.'
-      }
-    ]
+        hid: "description",
+        name: "description",
+        content:
+          "Get inspired by beautiful garden settings and ideas to enhance your outdoor space with creative arrangements and lighting.",
+      },
+    ],
   };
 };
 </script>

@@ -117,14 +117,15 @@ onMounted(() => {
 // adds metadata for the page
 const head = () => {
   return {
-    title: 'Plants for Container Gardening - Gardens & Sips',
+    title: "Plants for Container Gardening - Gardens & Sips",
     meta: [
       {
-        hid: 'description',
-        name: 'description',
-        content: 'Learn about the best plants for container gardening, including thrillers, fillers, and spillers, to create stunning garden displays.'
-      }
-    ]
+        hid: "description",
+        name: "description",
+        content:
+          "Learn about the best plants for container gardening, including thrillers, fillers, and spillers, to create stunning garden displays.",
+      },
+    ],
   };
 };
 </script>

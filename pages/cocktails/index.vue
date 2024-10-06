@@ -145,14 +145,15 @@ const isOpen = (index) => {
 // adds metadata for the page
 const head = () => {
   return {
-    title: 'Cocktails - Gardens & Sips',
+    title: "Cocktails - Gardens & Sips",
     meta: [
       {
-        hid: 'description',
-        name: 'description',
-        content: 'Discover amazing cocktail recipes perfect for your next gathering.'
-      }
-    ]
+        hid: "description",
+        name: "description",
+        content:
+          "Discover amazing cocktail recipes perfect for your next gathering.",
+      },
+    ],
   };
 };
 </script>

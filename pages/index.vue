@@ -28,9 +28,7 @@ import 'bootstrap';
   </client-only>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <style scoped>
 /* adds a background color to the text to provide contrast for readability */

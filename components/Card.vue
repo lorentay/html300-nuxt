@@ -1,6 +1,6 @@
 <script setup>
 
-// Define the props passed from the parent component
+// defines the props passed from the parent component
 const props = defineProps({
   cycle: String,
   watering: String, 
