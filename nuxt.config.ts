@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     'bootstrap/dist/css/bootstrap.css'
   ],
 
-  // adds Bootstrap JS as a plugin (optional, only if you need Bootstrap JavaScript features)
+  // adds Bootstrap JS as a plugin
   plugins: [
     { src: '~/plugins/bootstrap.js', mode: 'client' }
   ],
@@ -24,5 +24,17 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+
+  // adds fallback (default) metadata for the site
+  head: {
+    titleTemplate: '%s - Gardens & Sips',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: 'Gardens & Sips - Create a beautiful garden setting and refreshing cocktails for your next gathering.' },
+      { name: 'keywords', content: 'gardens, cocktails, entertaining, garden design, drink recipes' },
+      { name: 'author', content: 'lorentay' }
+    ]
   }
 });

@@ -2,9 +2,10 @@
   <!-- creates the container for the background with a full-screen
       height, centering all its content both vertically and horizontally. -->
   <div
-    class="background-container d-flex flex-column justify-content-center align-items-center text-center"
+    class="background-container d-flex flex-column justify-content-start align-items-center text-center"
   >
-    <div class="container my-5 flex-grow-1 overflow-auto">
+    <h1 class="page-header">Cocktail Recipes</h1>
+    <div class="container my-3 overflow-auto">
       <div class="row justify-content-center">
         <div class="col-md-8">
           <div class="accordion" id="recipeAccordion">
@@ -77,9 +78,10 @@
 </template>
 
 <script setup>
+// imports necessary functionality from Vue
 import { ref } from "vue";
 
-// recipe data
+// defines the recipes data
 const recipes = ref([
   {
     name: "Mojito Cocktail Recipe",
@@ -124,15 +126,13 @@ const recipes = ref([
 ]);
 
 // tracks which accordion items are open
-const openItems = ref([]); // Array to store the open accordion indexes
+const openItems = ref([]);
 
 // toggles the collapse of an accordion item
 const toggleCollapse = (index) => {
   if (openItems.value.includes(index)) {
-    // If the item is already open, close it
     openItems.value = openItems.value.filter((i) => i !== index);
   } else {
-    // Otherwise, open it
     openItems.value.push(index);
   }
 };
@@ -141,4 +141,28 @@ const toggleCollapse = (index) => {
 const isOpen = (index) => {
   return openItems.value.includes(index);
 };
+
+// adds metadata for the page
+const head = () => {
+  return {
+    title: 'Cocktails - Gardens & Sips',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Discover amazing cocktail recipes perfect for your next gathering.'
+      }
+    ]
+  };
+};
 </script>
+
+<style scoped>
+.page-header {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+</style>

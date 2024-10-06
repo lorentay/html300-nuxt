@@ -2,7 +2,7 @@
   <div class="inspiration-background">
     <!-- passed the header content to CarouselImages.vue using a slot -->
     <Carousel :images="images">
-      <h1 class="page-header">Inspiration</h1>
+      <h1 class="page-header">Inspiration for Your Garden Setting</h1>
     </Carousel>
   </div>
 </template>
@@ -36,6 +36,20 @@ const images = ref([
 
 // logs the image array to the console for debugging purposes
 console.log(images.value);
+
+// adds metadata for the page
+const head = () => {
+  return {
+    title: 'Garden Inspiration - Gardens & Sips',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Get inspired by beautiful garden settings and ideas to enhance your outdoor space with creative arrangements and lighting.'
+      }
+    ]
+  };
+};
 </script>
 
 <style scoped>

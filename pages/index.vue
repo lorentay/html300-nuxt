@@ -19,7 +19,7 @@ import 'bootstrap';
         </div>
         <NuxtLink
           to="/inspiration"
-          class="btn btn-success text-light mt-4 custom-btn"
+          class="btn btn-dark text-light mt-4 custom-btn"
         >
           Get Inspired
         </NuxtLink>
